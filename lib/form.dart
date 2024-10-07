@@ -103,6 +103,7 @@ class _MyFormState extends State<MyForm> {
                     secondNumber = double.parse(textEditingController1.text);
                     setState(() {
                       result = firstNumber * secondNumber;
+                       result = firstNumber * secondNumber;
                     });
                   },
                   child: Container(
