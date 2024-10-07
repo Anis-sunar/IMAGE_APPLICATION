@@ -59,12 +59,17 @@ class _MultiplicationTableState extends State<MultiplicationTable> {
                 ),
               ),
             ),
-            ...List.generate(results.length, (i) {
-              return Text(
-                results[i],
-                textDirection: TextDirection.ltr,
-              );
-            })
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: ListView.builder(
+                  itemCount: results.length,
+                  itemBuilder: (BuildContext context,int index) {
+                 return Text(results[index]);
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ),
